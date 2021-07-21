@@ -15,7 +15,7 @@ def relu6(x):
     return relu(x, max_value=6)
 
 def _inverted_res_block(inputs, expansion, stride, alpha, filters, block_id, skip_connection, rate=1):
-    in_channels = inputs.shape[-1].value
+    in_channels = inputs.shape[-1]
     pointwise_filters = _make_divisible(int(filters * alpha), 8)
     prefix = 'expanded_conv_{}_'.format(block_id)
 
