@@ -32,7 +32,7 @@ if __name__ == "__main__":
     #   mobilenet
     #   xception    
     #---------------------#
-    backbone = "mobilenet"
+    backbone = "xception"
     #---------------------#
     #   下采样的倍数
     #   8和16
@@ -50,7 +50,7 @@ if __name__ == "__main__":
     #   权值文件的下载请看README
     #   权值和主干特征提取网络一定要对应
     #-------------------------------------------#
-    model_path = "model_data/deeplabv3_mobilenetv2.h5"
+    model_path = "model_data/deeplabv3_xception.h5"
     model.load_weights(model_path,by_name=True,skip_mismatch=True)
 
     # 打开数据集的txt
